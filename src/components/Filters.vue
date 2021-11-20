@@ -14,7 +14,7 @@
       <div class="inline select-none" v-click-outside="hideMobileFilter">
         <div
             class="filter__header"
-            @click="showMobileFilter">
+            @click="toggleMobileFilter">
           <span>Filters <span class="ml-2"> ({{ filterCount }})</span></span>
           <svg v-if="filterCollapsed" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                xmlns="http://www.w3.org/2000/svg">
@@ -53,8 +53,8 @@ export default {
     toggleFilter(filterName) {
       this.$store.dispatch('toggleFilter', filterName)
     },
-    showMobileFilter() {
-      this.filterCollapsed = true;
+    toggleMobileFilter() {
+      this.filterCollapsed = !this.filterCollapsed;
     },
     hideMobileFilter() {
       this.filterCollapsed = false;
