@@ -12,7 +12,9 @@
     </div>
     <div class="md:inline lg:hidden mx-2">
       <div class="inline select-none" v-click-outside="hideMobileFilter">
-        <div class="filter__header inline flex justify-between bg-primary text-white px-4 py-2 w-60 rounded cursor-pointer" @click="showMobileFilter">
+        <div
+            class="filter__header"
+            @click="showMobileFilter">
           <span>Filters <span class="ml-2"> ({{ filterCount }})</span></span>
           <svg v-if="filterCollapsed" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +25,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </div>
-        <div class="filterList__mobile flex flex-col absolute bg-white" v-if="filterCollapsed">
+        <div class="filterList__mobile" v-if="filterCollapsed">
           <span
               class="px-4 py-2 w-60 cursor-pointer"
               :class="{'active': isActive(sport)}"
@@ -34,7 +36,6 @@
         </span>
         </div>
       </div>
-
     </div>
 
   </div>
@@ -87,12 +88,20 @@ export default {
 
 <style scoped>
 
+.filter__header {
+  @apply inline flex justify-between bg-primary text-white px-4 py-2 w-60 rounded cursor-pointer;
+}
+
 .filterItems {
   @apply px-12 py-2 border-2 rounded mx-2 border-primary cursor-pointer select-none text-primary font-semibold;
 }
 
 .active {
   @apply text-white bg-primary;
+}
+
+.filterList__mobile {
+  @apply flex flex-col absolute bg-white;
 }
 
 </style>

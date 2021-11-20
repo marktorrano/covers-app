@@ -1,7 +1,7 @@
 <template>
   <div id="sportsList" class="md:container md:mx-auto">
     <Filters :filters="filters"/>
-    <div class="leagueList mt-10 flex flex-wrap justify-around lg:justify-start">
+    <div class="leagueList">
       <League v-for="(league, index) in leagues" :key="index" :data="league"/>
     </div>
   </div>
@@ -81,5 +81,9 @@ export default {
 </script>
 
 <style scoped>
+
+.leagueList {
+  @apply mt-10 flex flex-wrap justify-around lg:justify-start;
+}
 
 </style>

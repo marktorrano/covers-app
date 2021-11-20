@@ -3,7 +3,7 @@
     <div class="leagueItem__header">
       <span>{{ data.acronym }}</span>
     </div>
-    <div class="leagueItem__teamList bg-tertiary flex-1 flex flex-col justify-between">
+    <div class="leagueItem__teamList">
       <div class="leagueItem__teams">
         <div class="leagueItem__team" v-for="(team, idx) in data.teams" :key="idx">
           <clazy-load :src="'img/global/covers_logo.svg'" class="leagueItem__teamLogo">
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="leagueItem__footer w-full pb-4 pt-8 px-4">
-        <span class="leagueItem__cta w-full bg-secondary text-white cursor-pointer px-4 rounded py-1 flex justify-center">Get live {{ data.acronym }} odds</span>
+        <span class="leagueItem__cta">Get live {{ data.acronym }} odds</span>
       </div>
     </div>
   </div>
@@ -51,6 +51,10 @@ export default {
   @apply px-8 flex flex-col justify-center;
 }
 
+.leagueItem__teamList {
+  @apply bg-tertiary flex-1 flex flex-col justify-between;
+}
+
 .leagueItem__image {
   @apply w-16 h-16 bg-white rounded-full flex justify-center;
 }
@@ -61,6 +65,10 @@ export default {
 
 .leagueItem__teamLogo {
   @apply flex flex-col mt-6 mb-2 justify-center items-center;
+}
+
+.leagueItem__cta {
+  @apply w-full bg-secondary text-white cursor-pointer px-4 rounded py-1 flex justify-center;
 }
 
 .lds-dual-ring {
