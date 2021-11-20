@@ -1,0 +1,86 @@
+{
+  "sports": [
+    {
+      "title": "Hockey",
+      "leagues": [
+        {
+          "name": "National Hockey League",
+          "acronym": "NHL",
+          "teams": [
+            {
+              "name": "Calgary Flames",
+              "logo": "img/logos/cal.png"
+            },
+            {
+              "name": "Edmonton Oilers",
+              "logo": "img/logos/edm.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Football",
+      "leagues": [
+        {
+          "name": "Canadian Football League",
+          "acronym": "CFL",
+          "teams": [
+            {
+              "name": "Calgary Stampeders",
+              "logo": "img/logos/cal2.png"
+            },
+            {
+              "name": "Edmonton Football Team",
+              "logo": "img/logos/edm2.png"
+            }
+          ]
+        },
+        {
+          "name": "National Football League",
+          "acronym": "NFL",
+          "teams": [
+            {
+              "name": "Seattle Seahawks",
+              "logo": "img/logos/sea.png"
+            },
+            {
+              "name": "Minnesota Vikings",
+              "logo": "img/logos/min.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Basketball",
+      "leagues": [
+        {
+          "name": "National Basketball Association",
+          "acronym": "NBA",
+          "teams": [
+            {
+              "name": "Toronto Raptors",
+              "logo": "img/logos/tor.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Baseball",
+      "leagues": [
+        {
+          "name": "Major League Baseball",
+          "acronym": "MLB",
+          "teams": [
+            {
+              "name": "Toronto Blue Jays",
+              "logo": "img/logos/tor2.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
